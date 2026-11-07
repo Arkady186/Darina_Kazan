@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nail Studio — маникюр в Казани · примерка дизайна на вашей руке</title>
+<meta name="description" content="Загрузите фото своей руки и примерьте дизайн ногтей: форма, длина, цвет, хром, кошачий глаз. Работы мастера маникюра в Казани.">
+<meta name="theme-color" content="#120a0e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-mark"><i></i><span>Nail Studio</span></div>
+  <div class="loader-bar"><b id="loaderBar"></b></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top"><span class="logo-dot"></span><b data-cfg="brand">Nail Studio</b><em data-cfg="city">Казань</em></a>
+  <nav class="nav-links" aria-label="Разделы">
+    <a href="#studio">Примерка</a>
+    <a href="#works">Работы</a>
+    <a href="#video">Видео</a>
+    <a href="#services">Услуги</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+  <a class="btn btn-sm" href="#contact">Записаться</a>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <canvas id="decor" class="decor" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow rv"><span class="line"></span><span>Маникюр и дизайн ногтей · <span data-cfg="city">Казань</span></span></p>
+      <h1 class="h1" id="h1">Примерьте маникюр <em>до&nbsp;записи</em></h1>
+      <p class="lead rv" style="--d:.55s">Загрузите фото своей руки: сайт найдёт ногти и покажет на них дизайны из моего портфолио. Форма, длина, глянец и блики, как вживую.</p>
+      <div class="hero-cta rv" style="--d:.7s">
+        <a class="btn" href="#studio" data-upload><span>Примерить на своей руке</span><i class="arr"></i></a>
+        <a class="btn btn-ghost" href="#works"><span>Смотреть работы</span></a>
+      </div>
+      <ul class="facts rv" style="--d:.85s">
+        <li><b>17</b><span>дизайнов</span></li>
+        <li><b>5</b><span>форм ногтей</span></li>
+        <li><b>0</b><span>загрузок на сервер — фото остаётся у вас</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-visual rv" style="--d:.3s">
+      <div class="frame tilt" id="heroFrame">
+        <div class="frame-in">
+          <canvas id="heroFx" aria-label="Фото работы, на котором ногти перекрашиваются в разные дизайны"></canvas>
+          <img class="frame-fallback" src="assets/work5.jpg" alt="Френч, работа мастера">
+          <div class="glare"></div>
+        </div>
+        <div class="frame-tag" id="heroTag"><span class="pulse"></span><span>На фото сейчас: <b id="heroName">оригинал</b></span></div>
+        <div class="frame-hint">Двигайте курсор — блики бегут по ногтям</div>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-hint" href="#how" aria-label="Листать вниз"><i></i><span>листайте</span></a>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Френч</span><i>✦</i><span>Хром</span><i>✦</i><span>Кошачий глаз</span><i>✦</i><span>Нюд</span><i>✦</i><span>Миндаль</span><i>✦</i><span>Красный глянец</span><i>✦</i><span>3D-декор</span><i>✦</i><span>Балерина</span><i>✦</i>
+    <span>Френч</span><i>✦</i><span>Хром</span><i>✦</i><span>Кошачий глаз</span><i>✦</i><span>Нюд</span><i>✦</i><span>Миндаль</span><i>✦</i><span>Красный глянец</span><i>✦</i><span>3D-декор</span><i>✦</i><span>Балерина</span><i>✦</i>
+  </div>
+</div>
+
+<!-- ============ HOW ============ -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow dark rv"><span class="line"></span> Как это работает</p>
+      <h2 class="h2 dark rv" style="--d:.1s">Три шага до <em>идеального</em> дизайна</h2>
+    </div>
+    <div class="steps">
+      <article class="step rv" style="--d:.05s">
+        <span class="step-no">01</span>
+        <svg class="step-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="12" width="36" height="26" rx="5"/><circle cx="24" cy="25" r="7"/><path d="M17 12l3-5h8l3 5"/></svg>
+        <h3>Сфотографируйте руку</h3>
+        <p>Тыльной стороной, пальцы видны целиком, свет ровный. Подойдут и ваши ногти без покрытия.</p>
+      </article>
+      <article class="step rv" style="--d:.15s">
+        <span class="step-no">02</span>
+        <svg class="step-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 40V22a4 4 0 0 1 8 0v-6a4 4 0 0 1 8 0v4a4 4 0 0 1 8 0v12c0 5-4 8-9 8h-6"/><rect x="18" y="8" width="8" height="9" rx="4"/></svg>
+        <h3>Нейросеть найдёт ногти</h3>
+        <p>Прямо в браузере, без отправки фото. Если что-то не так — поправьте точки пальцем.</p>
+      </article>
+      <article class="step rv" style="--d:.25s">
+        <span class="step-no">03</span>
+        <svg class="step-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l4.5 10.5L40 18l-8.5 7.5L34 37l-10-6-10 6 2.5-11.5L8 18l11.5-1.5z"/></svg>
+        <h3>Примерьте и сохраните</h3>
+        <p>Дизайн, форма, длина, глянец или мат. Сохраните картинку и пришлите мне — сделаем вживую.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDIO ============ -->
+<section class="studio" id="studio">
+  <div class="wrap">
+    <div class="sec-head light">
+      <p class="eyebrow rv"><span class="line"></span> Примерочная</p>
+      <h2 class="h2 rv" style="--d:.1s">Ваша рука. <em>Любой дизайн.</em></h2>
+    </div>
+
+    <div class="studio-grid">
+      <div class="stage-wrap">
+        <div class="src-bar">
+          <label class="btn btn-sm" for="file"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg><span>Загрузить фото руки</span></label>
+          <input type="file" id="file" accept="image/*" hidden>
+          <label class="btn btn-sm btn-ghost cam-btn" for="cam"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"/><circle cx="12" cy="13.5" r="3.5"/><path d="M9 7l1.5-3h3L15 7"/></svg><span>Камера</span></label>
+          <input type="file" id="cam" accept="image/*" capture="environment" hidden>
+          <div class="demos" id="demos"><span class="demos-l">или демо:</span></div>
+        </div>
+
+        <div class="stage" id="stage">
+          <div class="stage-in" id="stageIn">
+            <canvas id="studioFx"></canvas>
+            <svg class="edit-layer" id="editLayer" aria-hidden="true"></svg>
+            <div class="split-line" id="splitLine"><span>После</span><i></i><span>До</span></div>
+          </div>
+          <div class="drop" id="drop"><div><b>Отпустите фото здесь</b></div></div>
+          <div class="status" id="status" role="status" aria-live="polite"></div>
+          <div class="edit-bar" id="editBar">
+            <p id="editHint">Тяните <b>●</b> основание и <b>○</b> кончик, <b>◆</b> — ширина. Нажмите на ноготь без метки, чтобы добавить.</p>
+            <div class="edit-actions">
+              <button class="btn btn-sm btn-ghost" type="button" id="delNail">Удалить выбранный</button>
+              <button class="btn btn-sm btn-light" type="button" id="editDone">Готово</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage-tools">
+          <button class="tool" type="button" id="toggleSplit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M12 4v16"/></svg><span>До / после</span></button>
+          <button class="tool" type="button" id="editNails"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="7" cy="17" r="2.5"/><circle cx="17" cy="7" r="2.5"/><path d="M9 15l6-6"/></svg><span>Поправить разметку</span></button>
+          <button class="tool" type="button" id="download"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span>Сохранить фото</span></button>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <div class="pgroup">
+          <div class="plabel"><span>Дизайн</span><b id="curDesign">Нюд</b></div>
+          <div class="designs" id="designs"></div>
+        </div>
+        <div class="pgroup">
+          <div class="plabel"><span>Форма</span><b id="curShape">Квадрат</b></div>
+          <div class="shapes" id="shapes"></div>
+        </div>
+        <div class="pgroup">
+          <div class="plabel"><span>Длина</span><b id="curLen">как на фото</b></div>
+          <input type="range" id="len" min="1" max="2.2" step="0.01" value="1" aria-label="Длина ногтей">
+          <div class="range-l"><span>как на фото</span><span>XL</span></div>
+        </div>
+        <div class="pgroup">
+          <div class="plabel"><span>Покрытие</span></div>
+          <div class="seg" id="finish"><button type="button" class="on" data-v="0">Глянец</button><button type="button" data-v="1">Матовое</button></div>
+        </div>
+        <div class="pgroup book">
+          <p class="book-txt">Понравилось? Сохраните фото и пришлите мне: сделаем этот дизайн вживую.</p>
+          <a class="btn btn-full" href="#contact" id="bookThis"><span>Записаться с этим дизайном</span><i class="arr"></i></a>
+          <p class="privacy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Фото обрабатывается в вашем браузере и никуда не отправляется.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKS ============ -->
+<section class="works" id="works">
+  <div class="pin">
+    <div class="track" id="track">
+      <div class="panel-intro">
+        <p class="eyebrow dark"><span class="line"></span> Портфолио</p>
+        <h2 class="h2 dark">Работы, <em>которыми горжусь</em></h2>
+        <p class="lead dark">Реальные фото с кресла мастера. Любой дизайн можно перенести на свою руку в примерочной.</p>
+        <div class="swipe-hint"><span>листайте</span><i class="arr"></i></div>
+      </div>
+      <article class="card tilt"><div class="card-in"><img src="assets/work5.jpg" alt="Френч, квадрат" loading="lazy" width="960" height="1280"><div class="glare"></div>
+        <div class="card-cap"><span class="no">01</span><h3>Френч</h3><p>Белая улыбка, форма квадрат</p><button class="btn btn-sm btn-light" type="button" data-try="french">Примерить на себе</button></div></div></article>
+      <article class="card tilt"><div class="card-in"><img src="assets/work2.jpg" alt="Арт-дизайн с 3D-декором" loading="lazy" width="960" height="1280"><div class="glare"></div>
+        <div class="card-cap"><span class="no">02</span><h3>Арт-дизайн</h3><p>Звёзды, графика, 3D-декор</p><button class="btn btn-sm btn-light" type="button" data-try="art">Примерить на себе</button></div></div></article>
+      <article class="card tilt"><div class="card-in"><img src="assets/work3.jpg" alt="Красный глянец" loading="lazy" width="960" height="1280"><div class="glare"></div>
+        <div class="card-cap"><span class="no">03</span><h3>Красный глянец</h3><p>Глубокий красный, классика</p><button class="btn btn-sm btn-light" type="button" data-try="red">Примерить на себе</button></div></div></article>
+      <article class="card tilt"><div class="card-in"><img src="assets/work4.jpg" alt="Молочная лаванда с бантиком" loading="lazy" width="828" height="860"><div class="glare"></div>
+        <div class="card-cap"><span class="no">04</span><h3>Лаванда</h3><p>Молочный оттенок и бантик</p><button class="btn btn-sm btn-light" type="button" data-try="lavbow">Примерить на себе</button></div></div></article>
+      <article class="card tilt"><div class="card-in"><img src="assets/work1.jpg" alt="Нюд, длинный квадрат" loading="lazy" width="960" height="1280"><div class="glare"></div>
+        <div class="card-cap"><span class="no">05</span><h3>Нюд</h3><p>Молочно-розовый, длинный квадрат</p><button class="btn btn-sm btn-light" type="button" data-try="nude">Примерить на себе</button></div></div></article>
+      <div class="panel-outro">
+        <h2 class="h2 dark">Хотите <em>такой же</em> или&nbsp;свой?</h2>
+        <a class="btn btn-dark" href="#contact"><span>Обсудить дизайн</span><i class="arr"></i></a>
+      </div>
+    </div>
+    <div class="works-progress" aria-hidden="true"><i id="wprog"></i></div>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="video" id="video">
+  <div class="wrap video-grid">
+    <div class="phone tilt" id="phone">
+      <div class="phone-in">
+        <video id="vid" src="assets/work-video.mp4" poster="assets/video-poster.jpg" muted loop playsinline preload="metadata"></video>
+        <div class="glare"></div>
+        <button class="vid-toggle" id="vidToggle" type="button" aria-label="Пауза"><span></span></button>
+      </div>
+    </div>
+    <div class="video-copy">
+      <p class="eyebrow rv"><span class="line"></span> В движении</p>
+      <h2 class="h2 rv" style="--d:.1s">Блеск, который <em>живёт на свету</em></h2>
+      <p class="lead rv" style="--d:.2s">Френч с ровной «улыбкой» и зеркальным покрытием. На видео видно, как свет перетекает по форме ногтя: так работа выглядит вживую.</p>
+      <ul class="ticks rv" style="--d:.3s">
+        <li>Аккуратная форма и ровный апекс</li>
+        <li>Чистая кутикула и гладкое покрытие</li>
+        <li>Глянец, который держится</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow dark rv"><span class="line"></span> Услуги</p>
+      <h2 class="h2 dark rv" style="--d:.1s">Что я <em>делаю</em></h2>
+    </div>
+    <div class="sgrid">
+      <article class="scard tilt rv" style="--d:.05s"><span class="sno">01</span><h3>Маникюр с покрытием</h3><p>Аккуратная обработка и стойкое глянцевое покрытие гель-лаком.</p></article>
+      <article class="scard tilt rv" style="--d:.1s"><span class="sno">02</span><h3>Наращивание</h3><p>Квадрат, миндаль, балерина любой длины: ровный апекс и естественная архитектура.</p></article>
+      <article class="scard tilt rv" style="--d:.15s"><span class="sno">03</span><h3>Френч и омбре</h3><p>Классическая белая улыбка, цветной френч, мягкое омбре.</p></article>
+      <article class="scard tilt rv" style="--d:.2s"><span class="sno">04</span><h3>Дизайн и 3D-декор</h3><p>Рисунки, стразы, шармы, хром и кошачий глаз — по вашей идее.</p></article>
+      <article class="scard tilt rv" style="--d:.25s"><span class="sno">05</span><h3>Коррекция и снятие</h3><p>Бережно обновим форму и покрытие или снимем старое.</p></article>
+      <article class="scard scard-cta tilt rv" style="--d:.3s"><h3>Сколько стоит?</h3><p>Зависит от длины и дизайна. Пришлите фото из примерочной, и я назову точную цену.</p><a class="link light" href="#contact">Узнать цену <i class="arr"></i></a></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv"><span class="line"></span> Запись</p>
+    <h2 class="h2 big rv" style="--d:.1s">Запишитесь на <em>свой дизайн</em></h2>
+    <div class="choice rv" id="choice" style="--d:.2s" hidden>
+      <span>Ваш выбор из примерочной:</span><b id="choiceTxt"></b>
+      <button class="link light" type="button" id="copyChoice">Скопировать</button>
+    </div>
+    <p class="lead rv" style="--d:.25s">Пришлите фото-референс или картинку из примерочной. Подберу форму, длину и оттенок.</p>
+    <div class="links rv" style="--d:.3s">
+      <a class="btn btn-light" data-link="telegram" href="#"><span>Telegram</span><i class="arr"></i></a>
+      <a class="btn btn-ghost" data-link="whatsapp" href="#"><span>WhatsApp</span></a>
+      <a class="btn btn-ghost" data-link="instagram" href="#"><span>Instagram</span></a>
+      <a class="btn btn-ghost" data-link="phone" href="#"><span data-cfg="phoneText">Позвонить</span></a>
+    </div>
+    <p class="addr rv" style="--d:.4s"><span data-cfg="city">Казань</span> · <span data-cfg="address">адрес — по записи</span></p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© <span id="yr"></span> <span data-cfg="brand">Nail Studio</span> · <span data-cfg="city">Казань</span></span>
+    <a href="#top">Наверх ↑</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/gl3d.js"></script>
+<script src="js/designs.js"></script>
+<script src="js/nailfx.js"></script>
+<script src="js/models.js"></script>
+<script src="js/detect.js"></script>
+<script src="js/decor.js"></script>
+<script src="js/studio.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
